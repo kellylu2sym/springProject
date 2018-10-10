@@ -1,0 +1,18 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "powercalculator.StorageProperties",
+      "name": "storage",
+      "type": "powercalculator.StorageProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "powercalculator.StorageProperties",
+      "name": "storage.location",
+      "description": "Folder location for storing files",
+      "type": "java.lang.String"
+    }
+  ]
+}
