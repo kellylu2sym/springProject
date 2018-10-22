@@ -36,24 +36,22 @@ public class FileUploadController {
 	}
 
 	@GetMapping("/")
-	public String listUploadedFiles(Model model) throws IOException {
+	public List<String> listUploadedFiles(Model model) throws IOException {
 
-		model.addAttribute("files",
-				storageService.loadAll()
+				return storageService.loadAll()
 						.map(path -> MvcUriComponentsBuilder
 								.fromMethodName(FileUploadController.class, "serveFile", path.getFileName().toString())
 								.build().toString())
-						.collect(Collectors.toList()));
-		return "uploadForm";
+						.collect(Collectors.toList());
 
 	}
 
 	@PostMapping("/")
-	public String handleFileUpload(@RequestParam("file") MultipartFile file, RedirectAttributes redirectAttributes) {
+	public ResponseEntity<String> handleFileUpload(@RequestParam("file") MultipartFile file) {
 
 		storageService.store(file);
-		redirectAttributes.addFlashAttribute("message", "you seccussfully uploaded the file !");
-		return "redirect:/";
+	    
+		return ResponseEntity.ok().build();
 	}
 
 	@GetMapping("/files/{filename:.+}")
