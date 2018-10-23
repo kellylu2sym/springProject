@@ -9,20 +9,28 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.nio.file.Paths;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class FileOperController {
-	private static final Logger logger = LogManager.getLogger(FileOperController.class.getName());
+public class FileOpenController {
+	private static final Logger logger = LogManager.getLogger(FileOpenController.class.getName());
 
-	@GetMapping("/")
-	public String FileReader(String filePath) throws FileNotFoundException {
-		FileInputStream fileInputStream = new FileInputStream(filePath);
+	@Autowired
+	private StorageProperties pro;
+	@GetMapping("/reader")
+	public String FileReader(@RequestParam String filename) throws FileNotFoundException {
+		String rootPath = pro.getLocation();
+		String target = Paths.get(rootPath).resolve(filename).toString();
+		FileInputStream fileInputStream = new FileInputStream(target);
 		BufferedReader reader = null;
 		StringBuffer buf = new StringBuffer();
 		
@@ -47,16 +55,22 @@ public class FileOperController {
 		return null;
 	}
 
-	@PostMapping("/")
-	public void FileWriter(String filePath, String content) throws IOException {
-		File file = new File(filePath);
+	@PostMapping("/writer")
+	public void FileWriter(@RequestParam String filename, @RequestParam String content) throws IOException {
+		String target = Paths.get(pro.getLocation()).resolve(filename).toString();
+		File file = new File(target);
+		if(!file.exists()){
+			file.createNewFile();
+			}
 		
 		try 
 		{
-			FileOutputStream outputStream = new FileOutputStream(file);
+			FileOutputStream outputStream = new FileOutputStream(target,true);
 			OutputStreamWriter tempWriter = new OutputStreamWriter(outputStream);
 			BufferedWriter writer = new BufferedWriter(tempWriter);
 			writer.write(content);
+			//writer.write(content);
+			writer.close();
 			
 		}
 		catch(FileNotFoundException e)

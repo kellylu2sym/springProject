@@ -1,5 +1,4 @@
 powercalculator\FileSystemStorageService.class
-powercalculator\FileOperController.class
 powercalculator\StorageProperties.class
 powercalculator\StorageFileNotFoundException.class
 powercalculator\HelloController.class
@@ -8,3 +7,4 @@ powercalculator\FileUploadController.class
 powercalculator\StorageException.class
 META-INF\spring-configuration-metadata.json
 powercalculator\StorageService.class
+powercalculator\FileOpenController.class

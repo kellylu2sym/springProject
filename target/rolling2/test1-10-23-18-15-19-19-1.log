@@ -1,0 +1,23 @@
+2018-10-23 15:16:04,541 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2018-10-23 15:16:04,735 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1154 ms
+2018-10-23 15:16:04,832 INFO o.s.b.w.s.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
+2018-10-23 15:16:04,840 INFO o.s.b.w.s.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-23 15:16:04,841 INFO o.s.b.w.s.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-23 15:16:04,845 INFO o.s.b.w.s.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-10-23 15:16:04,845 INFO o.s.b.w.s.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-23 15:16:05,022 INFO o.s.w.s.h.AbstractUrlHandlerMapping [main] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-23 15:16:05,156 INFO o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@31e75d13: startup date [Tue Oct 23 15:16:03 CST 2018]; root of context hierarchy
+2018-10-23 15:16:05,213 INFO o.s.w.s.h.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/reader],methods=[GET]}" onto public java.lang.String powercalculator.FileOpenController.FileReader(java.lang.String) throws java.io.FileNotFoundException
+2018-10-23 15:16:05,214 INFO o.s.w.s.h.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/writer],methods=[POST]}" onto public void powercalculator.FileOpenController.FileWriter(java.lang.String,java.lang.String) throws java.io.IOException
+2018-10-23 15:16:05,216 INFO o.s.w.s.h.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/files/{filename:.+}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.Resource> powercalculator.FileUploadController.serveFile(java.lang.String)
+2018-10-23 15:16:05,217 INFO o.s.w.s.h.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/],methods=[GET]}" onto public java.util.List<java.lang.String> powercalculator.FileUploadController.listUploadedFiles(org.springframework.ui.Model) throws java.io.IOException
+2018-10-23 15:16:05,219 INFO o.s.w.s.h.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> powercalculator.FileUploadController.handleFileUpload(org.springframework.web.multipart.MultipartFile)
+2018-10-23 15:16:05,220 INFO o.s.w.s.h.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/hello]}" onto public java.lang.String powercalculator.HelloController.hello()
+2018-10-23 15:16:05,222 INFO o.s.w.s.h.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-23 15:16:05,223 INFO o.s.w.s.h.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-10-23 15:16:05,245 INFO o.s.w.s.h.AbstractUrlHandlerMapping [main] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-23 15:16:05,245 INFO o.s.w.s.h.AbstractUrlHandlerMapping [main] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-23 15:16:05,404 INFO o.s.j.e.MBeanExporter [main] Registering beans for JMX exposure on startup
+2018-10-23 15:16:05,471 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2018-10-23 15:16:05,475 INFO o.s.b.StartupInfoLogger [main] Started Main in 2.194 seconds (JVM running for 3.185)
+2018-10-23 15:19:19,934 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.0.12.Final

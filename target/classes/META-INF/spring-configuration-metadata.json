@@ -3,14 +3,14 @@
   "groups": [
     {
       "sourceType": "powercalculator.StorageProperties",
-      "name": "storage",
+      "name": "",
       "type": "powercalculator.StorageProperties"
     }
   ],
   "properties": [
     {
       "sourceType": "powercalculator.StorageProperties",
-      "name": "storage.location",
+      "name": "location",
       "description": "Folder location for storing files",
       "type": "java.lang.String"
     }

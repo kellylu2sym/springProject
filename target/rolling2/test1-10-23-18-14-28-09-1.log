@@ -1,0 +1,13 @@
+2018-10-23 14:21:40,887 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] FrameworkServlet 'dispatcherServlet': initialization started
+2018-10-23 14:21:40,932 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+2018-10-23 14:28:05,015 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.0.12.Final
+2018-10-23 14:28:05,206 INFO o.s.b.StartupInfoLogger [main] Starting Main on CNENLUK8L2C with PID 18716 (C:\Users\luk8\Documents\workspace-sts-3.9.5.RELEASE\springProject\target\classes started by luk8 in C:\Users\luk8\Documents\workspace-sts-3.9.5.RELEASE\springProject)
+2018-10-23 14:28:05,210 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-10-23 14:28:05,249 INFO o.s.c.s.AbstractApplicationContext [main] Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35d6ca49: startup date [Tue Oct 23 14:28:05 CST 2018]; root of context hierarchy
+2018-10-23 14:28:07,705 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2018-10-23 14:28:08,064 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 2819 ms
+2018-10-23 14:28:08,209 INFO o.s.b.w.s.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
+2018-10-23 14:28:08,213 INFO o.s.b.w.s.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-23 14:28:08,214 INFO o.s.b.w.s.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-23 14:28:08,214 INFO o.s.b.w.s.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-10-23 14:28:08,215 INFO o.s.b.w.s.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
