@@ -28,12 +28,8 @@ import org.springframework.web.util.UriComponentsBuilder;
 @Controller
 public class FileUploadController {
 
-	private StorageService storageService;
-
 	@Autowired
-	public FileUploadController(StorageService storageSevervice) {
-		this.storageService = storageSevervice;
-	}
+	private StorageService storageService;
 
 	@GetMapping("/")
 	public List<String> listUploadedFiles(Model model) throws IOException {
